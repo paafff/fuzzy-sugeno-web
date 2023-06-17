@@ -19,18 +19,13 @@ const InputForm = () => {
   const [persBanyak, setPersBanyak] = useState(0);
 
   // nilai R1,R2,R3,R4
-  //   const [nilaiR1, setNilaiR1] = useState(0);
-  //   const [nilaiR2, setNilaiR2] = useState(0);
-  //   const [nilaiR3, setNilaiR3] = useState(0);
-  //   const [nilaiR4, setNilaiR4] = useState(0);
+
   const nilaiR1 = permTurun < persBanyak ? permTurun : persBanyak;
   const nilaiR2 = permTurun < persSedikit ? permTurun : persSedikit;
   const nilaiR3 = permNaik < persBanyak ? permNaik : persBanyak;
   const nilaiR4 = permNaik < persSedikit ? permNaik : persSedikit;
 
   //   hasil inferensi / rule fuzzyfikasi
-  //   const [prodBerkurang, setProdBerkurang] = useState(0);
-  //   const [prodBertambah, setProdBertambah] = useState(0);
   const prodBerkurang = nilaiR1 < nilaiR2 ? nilaiR1 : nilaiR2;
   const prodBertambah = nilaiR3 > nilaiR4 ? nilaiR3 : nilaiR4;
 
@@ -38,47 +33,6 @@ const InputForm = () => {
   const nilaiSugeno =
     (prodBerkurang * varProdMin + prodBertambah * varProdMax) /
     (prodBerkurang + prodBertambah);
-
-  //   hitung a pred
-  //   const hitungNilaiAPred = (e) => {
-  //     e.preventDefault();
-
-  //     console.log("nilai", varPermMin);
-  //     console.log("nilai", varPermMax);
-  //     console.log("nilai", varPersMin);
-  //     console.log("nilai", varPersMax);
-  //     console.log("nilai", varProdMin);
-  //     console.log("nilai", varProdMax);
-
-  //     console.log("input", permintaanX);
-  //     console.log("input", persediaanX);
-
-  //     console.log("hasil", permTurun);
-  //     console.log("hasil", permNaik);
-  //     console.log("hasil", persSedikit);
-  //     console.log("hasil", persBanyak);
-  //   };
-
-  //   perbandingan untuk nilai Rule
-  //   const nilaiRule = () => {
-  //     try {
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   useEffect(() => {
-
-  //     setPermTurun((varPermMax - permintaanX) / (varPermMax - varPermMin));
-  //     setPermNaik((permintaanX - varPermMin) / (varPermMax - varPermMin));
-  //     setPersSedikit((varPersMax - persediaanX) / (varPersMax - varPersMin));
-  //     setPersBanyak((persediaanX - varPersMin) / (varPersMax - varPersMin));
-
-  //     console.log("nilai", permTurun);
-  //     console.log("nilai", permNaik);
-  //     console.log("nilai", persSedikit);
-  //     console.log("nilai", persBanyak);
-  //   }, [permintaanX, persediaanX]);
 
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
@@ -88,6 +42,11 @@ const InputForm = () => {
       setPermNaik((permintaanX - varPermMin) / (varPermMax - varPermMin));
       setPersSedikit((varPersMax - persediaanX) / (varPersMax - varPersMin));
       setPersBanyak((persediaanX - varPersMin) / (varPersMax - varPersMin));
+
+      console.log("nilai", permTurun);
+      console.log("nilai", permNaik);
+      console.log("nilai", persSedikit);
+      console.log("nilai", persBanyak);
 
       // Reset state isButtonClicked setelah useEffect dijalankan
       setIsButtonClicked(false);
