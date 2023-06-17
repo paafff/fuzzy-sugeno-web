@@ -89,23 +89,10 @@ const InputForm = () => {
       setPersSedikit((varPersMax - persediaanX) / (varPersMax - varPersMin));
       setPersBanyak((persediaanX - varPersMin) / (varPersMax - varPersMin));
 
-      console.log("nilai", permTurun);
-      console.log("nilai", permNaik);
-      console.log("nilai", persSedikit);
-      console.log("nilai", persBanyak);
-
       // Reset state isButtonClicked setelah useEffect dijalankan
       setIsButtonClicked(false);
     }
-  }, [
-    isButtonClicked,
-    permintaanX,
-    persediaanX,
-    varPermMax,
-    varPermMin,
-    varPersMax,
-    varPersMin,
-  ]);
+  }, [isButtonClicked]);
 
   const hitungNilaiAPred = (e) => {
     e.preventDefault();
