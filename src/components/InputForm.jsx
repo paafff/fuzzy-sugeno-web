@@ -43,15 +43,18 @@ const InputForm = () => {
       setPersSedikit((varPersMax - persediaanX) / (varPersMax - varPersMin));
       setPersBanyak((persediaanX - varPersMin) / (varPersMax - varPersMin));
 
-      console.log("nilai", permTurun);
-      console.log("nilai", permNaik);
-      console.log("nilai", persSedikit);
-      console.log("nilai", persBanyak);
-
       // Reset state isButtonClicked setelah useEffect dijalankan
       setIsButtonClicked(false);
     }
-  }, [isButtonClicked]);
+  }, [
+    isButtonClicked,
+    varPermMax,
+    varPermMin,
+    varPersMax,
+    varPersMin,
+    permintaanX,
+    persediaanX,
+  ]);
 
   const hitungNilaiAPred = (e) => {
     e.preventDefault();
@@ -218,12 +221,51 @@ const InputForm = () => {
             </div>
 
             <div className="flex justify-end w-full">
-              <button
-                className="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                type="submit"
-              >
-                Submit
+              {/* button */}
+              <button className="" type="submit">
+                <a
+                  href="#_"
+                  class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-gray-800 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
+                >
+                  <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-gray-800 group-hover:h-full"></span>
+                  <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                    <svg
+                      class="w-5 h-5 text-gray-800"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                    <svg
+                      class="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                    Fuzzyfikasi
+                  </span>
+                </a>
               </button>
+              {/* button */}
             </div>
           </form>
         </div>
@@ -265,7 +307,8 @@ const InputForm = () => {
                       required
                     />
                     <p className="py-2 text-sm text-gray-600">
-                      add notes about populating the field
+                      *input nilai permintaan untuk menghitung jumlah
+                      produksinya.
                     </p>
                   </div>
                 </div>
@@ -289,17 +332,57 @@ const InputForm = () => {
                       required
                     />
                     <p className="py-2 text-sm text-gray-600">
-                      add notes about populating the field
+                      *input nilai persediaan untuk menghitung jumlah
+                      produksinya.
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-end w-full">
-                  <button
-                    className="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                    type="submit"
-                  >
-                    Submit
+                  {/* button */}
+                  <button className="" type="submit">
+                    <a
+                      href="#_"
+                      class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-gray-800 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
+                    >
+                      <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-gray-800 group-hover:h-full"></span>
+                      <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                        <svg
+                          class="w-5 h-5 text-gray-800"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                        <svg
+                          class="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                        Defuzzyfikasi
+                      </span>
+                    </a>
                   </button>
+                  {/* button */}
                 </div>
               </form>
             </div>
