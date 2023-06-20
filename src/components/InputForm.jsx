@@ -403,7 +403,7 @@ const InputForm = () => {
                   <thead>
                     <tr>
                       <th className="text-left font-sans font-bold text-gray-600 py-2">
-                        Rules Fuzzy
+                        Fuzzy Rules
                       </th>
                       <th className="font-sans font-bold text-gray-600 py-2">
                         Nilai
