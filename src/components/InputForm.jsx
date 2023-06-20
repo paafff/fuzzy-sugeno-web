@@ -63,7 +63,7 @@ const InputForm = () => {
 
   return (
     <div className=" mx-auto w-4/5 flex flex-col lg:flex-row justify-evenly">
-      <div className=" max-w-xl w-full">
+      <div className="mx-auto max-w-xl w-full">
         {/* <!--Title--> */}
         <h1 className="font-sans font-bold break-normal text-gray-300  py-4 text-2xl">
           Input Nilai Semesta Perhitungan
@@ -274,7 +274,7 @@ const InputForm = () => {
       {/* <!--/Card--> */}
 
       {/* kanan */}
-      <div className=" max-w-2xl w-full">
+      <div className="mx-auto max-w-2xl w-full pt-20 lg:pt-0">
         <>
           <div>
             <h1 className="font-sans font-bold break-normal text-gray-300  py-4 text-2xl">
