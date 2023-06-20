@@ -62,7 +62,7 @@ const InputForm = () => {
   };
 
   return (
-    <div className=" mx-auto w-4/5 flex flex-row justify-evenly">
+    <div className=" mx-auto w-4/5 flex flex-col lg:flex-row justify-evenly">
       <div className=" max-w-xl w-full">
         {/* <!--Title--> */}
         <h1 className="font-sans font-bold break-normal text-gray-300  py-4 text-2xl">
@@ -91,7 +91,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai permintaan terendah dalam 30 hari terakhir
+                  *Nilai permintaan terendah selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai permintaan tertinggi dalam 30 hari terakhir
+                  *Nilai permintaan tertinggi selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai persediaan terendah dalam 30 hari terakhir
+                  *Nilai persediaan terendah selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -165,7 +165,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai persediaan tertinggi dalam 30 hari terakhir
+                  *Nilai persediaan tertinggi selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -191,7 +191,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai produksi terendah dalam 30 hari terakhir
+                  *Nilai produksi terendah selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -215,7 +215,7 @@ const InputForm = () => {
                   required
                 />
                 <p className="py-2 text-sm text-gray-600">
-                  *nilai produksi tertinggi dalam 30 hari terakhir
+                  *Nilai produksi tertinggi selama periode tertentu.
                 </p>
               </div>
             </div>
@@ -303,11 +303,11 @@ const InputForm = () => {
                       //   value={permintaanX}
                       onChange={(e) => setPermintaanX(parseInt(e.target.value))}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                      placeholder="Product Name"
+                      placeholder="Input Nilai"
                       required
                     />
                     <p className="py-2 text-sm text-gray-600">
-                      *input nilai permintaan untuk menghitung jumlah
+                      *Input nilai permintaan untuk menghitung jumlah
                       produksinya.
                     </p>
                   </div>
@@ -328,11 +328,11 @@ const InputForm = () => {
                       //   value={persediaanX}
                       onChange={(e) => setPersediaanX(parseInt(e.target.value))}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                      placeholder="Product Name"
+                      placeholder="Input Nilai"
                       required
                     />
                     <p className="py-2 text-sm text-gray-600">
-                      *input nilai persediaan untuk menghitung jumlah
+                      *Input nilai persediaan untuk menghitung jumlah
                       produksinya.
                     </p>
                   </div>
